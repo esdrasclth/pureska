@@ -78,7 +78,7 @@ export default function ProductCard({ product, size = "default" }: ProductCardPr
               className="text-[#3D1A4B] font-bold text-lg ml-auto"
               style={{ fontFamily: "'Satoshi', sans-serif", fontWeight: 500 }}
             >
-              ${product.price.toFixed(2)}
+              L {product.price.toFixed(2)}
             </span>
           </div>
         </div>

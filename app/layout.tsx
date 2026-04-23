@@ -6,9 +6,12 @@ import Footer from "@/app/components/layout/Footer"
 import CartDrawer from "@/app/components/layout/CartDrawer"
 
 export const metadata: Metadata = {
-  title: "PURESKA — Live pure. Glow harder.",
+  title: "PURESKA — Vive puro. Brilla Diferente.",
   description:
-    "Supplements & cosmetics for people who take their wellness seriously. Clinically tested, clean ingredients, made for real life.",
+    "Suplementos y cosméticos para quienes toman su bienestar en serio. Clínicamente probados, ingredientes limpios, hechos para la vida real.",
+  icons: {
+    icon: { url: "/images/favicon.jpg", type: "image/jpeg" },
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

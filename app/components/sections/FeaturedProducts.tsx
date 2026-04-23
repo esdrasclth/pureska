@@ -45,9 +45,9 @@ export default function FeaturedProducts({ products }: { products: NormalizedPro
           </div>
           <h2
             className="text-[#1A1A1A] leading-none"
-            style={{ fontFamily: "'Cabinet Grotesk', sans-serif", fontWeight: 800, fontSize: "clamp(48px, 7vw, 90px)" }}
+            style={{ fontFamily: "'Cabinet Grotesk', sans-serif", fontWeight: 800, fontSize: "clamp(36px, 5vw, 64px)" }}
           >
-            La Colección.
+            Lo Más Vendido.
           </h2>
         </motion.div>
 
