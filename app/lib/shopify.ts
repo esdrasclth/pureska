@@ -1,8 +1,9 @@
-const DOMAIN = process.env.SHOPIFY_STORE_DOMAIN!
-const TOKEN = process.env.SHOPIFY_STOREFRONT_TOKEN!
-const API_URL = `https://${DOMAIN}/api/2024-01/graphql.json`
+const DOMAIN = process.env.SHOPIFY_STORE_DOMAIN
+const TOKEN = process.env.SHOPIFY_STOREFRONT_TOKEN
+const API_URL = DOMAIN ? `https://${DOMAIN}/api/2024-01/graphql.json` : null
 
 async function shopifyFetch<T>(query: string, variables?: Record<string, unknown>): Promise<T> {
+  if (!API_URL || !TOKEN) throw new Error("Shopify env vars not configured")
   const res = await fetch(API_URL, {
     method: "POST",
     headers: {
