@@ -52,10 +52,12 @@ export default function Navbar() {
             <Image
               src="/images/logo.png"
               alt="PURESKA"
-              width={100}
-              height={32}
-              className="h-6 md:h-8 w-auto object-contain"
+              width={400}
+              height={128}
+              className="object-contain"
+              style={{ height: "2rem", width: "auto" }}
               priority
+              loading="eager"
             />
           </Link>
 
