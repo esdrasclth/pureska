@@ -134,17 +134,21 @@ const PRODUCT_FRAGMENT = `
 // ─── Queries ─────────────────────────────────────────────────────────────────
 
 export async function getAllProducts(): Promise<NormalizedProduct[]> {
-  const data = await shopifyFetch<{
-    products: { edges: { node: ShopifyProduct }[] }
-  }>(`
-    ${PRODUCT_FRAGMENT}
-    query GetAllProducts {
-      products(first: 50, sortKey: BEST_SELLING) {
-        edges { node { ...ProductFields } }
+  try {
+    const data = await shopifyFetch<{
+      products: { edges: { node: ShopifyProduct }[] }
+    }>(`
+      ${PRODUCT_FRAGMENT}
+      query GetAllProducts {
+        products(first: 50, sortKey: BEST_SELLING) {
+          edges { node { ...ProductFields } }
+        }
       }
-    }
-  `)
-  return data.products.edges.map((e) => normalize(e.node))
+    `)
+    return data.products.edges.map((e) => normalize(e.node))
+  } catch {
+    return []
+  }
 }
 
 export async function getProductByHandle(handle: string): Promise<NormalizedProduct | null> {
