@@ -9,7 +9,7 @@ import Badge from "@/app/components/ui/Badge"
 import StarRating from "@/app/components/ui/StarRating"
 import ProductCard from "@/app/components/ui/ProductCard"
 
-const ACCORDION_TABS = ["Reseñas"] as const
+const ACCORDION_TABS = ["Ingredientes", "Cómo usar", "Reseñas"] as const
 type AccordionTab = (typeof ACCORDION_TABS)[number]
 
 type Props = { product: NormalizedProduct; related: NormalizedProduct[] }

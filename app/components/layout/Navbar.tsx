@@ -40,9 +40,9 @@ export default function Navbar() {
     <>
       <motion.header
         animate={{
-          backgroundColor: scrolled ? "rgba(255,255,255,0.97)" : "transparent",
-          borderBottomColor: scrolled ? "#E8E0D5" : "transparent",
-          backdropFilter: scrolled ? "blur(10px)" : "none",
+          backgroundColor: scrolled ? "rgba(255,255,255,0.97)" : "rgba(255,255,255,0)",
+          borderBottomColor: scrolled ? "#E8E0D5" : "rgba(0,0,0,0)",
+          backdropFilter: scrolled ? "blur(10px)" : "blur(0px)",
         }}
         transition={{ duration: 0.3 }}
         className="fixed top-0 left-0 right-0 z-50 border-b-[0.5px]"
