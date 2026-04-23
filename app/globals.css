@@ -1,26 +1,131 @@
+@import url("https://api.fontshare.com/v2/css?f[]=cabinet-grotesk@800,700,500&display=swap");
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,400;1,9..144,700&display=swap");
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-cream: #F7F3EE;
+  --color-plum: #3D1A4B;
+  --color-coral: #FF5C47;
+  --color-honey: #F2C46D;
+  --color-near-black: #1A1A1A;
+  --color-surface: #FFFFFF;
+  --color-muted: #7A7060;
+  --color-dark-panel: #1E0E2C;
+
+  --font-cabinet: "Cabinet Grotesk", sans-serif;
+  --font-satoshi: "Satoshi", sans-serif;
+  --font-fraunces: "Fraunces", serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: #F7F3EE;
+  color: #1A1A1A;
+  font-family: "Satoshi", sans-serif;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Cabinet Grotesk", sans-serif;
+}
+
+.font-fraunces {
+  font-family: "Fraunces", serif;
+  font-style: italic;
+}
+
+.section-label {
+  font-family: "Satoshi", sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 11px;
+}
+
+@keyframes pulse-down {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.4; }
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+}
+
+@keyframes count-up {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-pulse-down {
+  animation: pulse-down 1.5s ease-in-out infinite;
+}
+
+.animate-shake {
+  animation: shake 0.4s ease;
+}
+
+.blob-shape {
+  border-radius: 60% 40% 70% 30% / 50% 60% 40% 50%;
+}
+
+.prose-description {
+  color: #7A7060;
+  font-family: "Satoshi", sans-serif;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.prose-description p {
+  margin-bottom: 0.75rem;
+}
+
+.prose-description ul,
+.prose-description ol {
+  padding-left: 1.25rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose-description ul {
+  list-style-type: disc;
+}
+
+.prose-description ol {
+  list-style-type: decimal;
+}
+
+.prose-description li {
+  margin-bottom: 0.25rem;
+}
+
+.prose-description strong,
+.prose-description b {
+  color: #1A1A1A;
+  font-weight: 600;
+}
+
+.prose-description h1,
+.prose-description h2,
+.prose-description h3 {
+  font-family: "Cabinet Grotesk", sans-serif;
+  font-weight: 700;
+  color: #1A1A1A;
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+.prose-description a {
+  color: #FF5C47;
+  text-decoration: underline;
 }
