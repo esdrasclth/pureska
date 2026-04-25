@@ -3,12 +3,11 @@ import type { NextRequest } from "next/server"
 
 const MAINTENANCE = process.env.MAINTENANCE_MODE === "true"
 
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   if (!MAINTENANCE) return NextResponse.next()
 
   const { pathname } = request.nextUrl
 
-  // Let the maintenance page and Next.js internals through
   if (
     pathname.startsWith("/maintenance") ||
     pathname.startsWith("/_next") ||

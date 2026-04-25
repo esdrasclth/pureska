@@ -20,16 +20,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col antialiased" style={{ background: "#F7F3EE" }}>
-        {MAINTENANCE ? (
-          <main className="flex-1">{children}</main>
-        ) : (
-          <CartProvider>
-            <Navbar />
+        <CartProvider>
+          {MAINTENANCE ? (
             <main className="flex-1">{children}</main>
-            <Footer />
-            <CartDrawer />
-          </CartProvider>
-        )}
+          ) : (
+            <>
+              <Navbar />
+              <main className="flex-1">{children}</main>
+              <Footer />
+              <CartDrawer />
+            </>
+          )}
+        </CartProvider>
       </body>
     </html>
   )
