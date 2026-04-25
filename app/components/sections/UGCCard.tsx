@@ -41,7 +41,7 @@ export default function UGCCard({ video, index }: UGCCardProps) {
       >
         <div
           className="relative overflow-hidden rounded-2xl shadow-[0_4px_24px_rgba(0,0,0,0.10)]"
-          style={{ width: 220, height: 390, background: "#1a1a1a" }}
+          style={{ width: 270, height: 480, background: "#1a1a1a" }}
         >
           {/* Thumbnail / video */}
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -67,7 +67,7 @@ export default function UGCCard({ video, index }: UGCCardProps) {
           </div>
           <div className="absolute top-3 right-3 bg-white/90 rounded-full px-2 py-0.5 flex items-center gap-1">
             <span className="text-[#FF5C47] text-[9px]">✓</span>
-            <span className="text-[#1A1A1A] text-[10px] font-medium">Verified</span>
+            <span className="text-[#1A1A1A] text-[10px] font-medium">Verificado</span>
           </div>
 
           {/* Play button */}

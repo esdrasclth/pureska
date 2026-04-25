@@ -1,4 +1,4 @@
-import { getAllProducts } from "@/app/lib/shopify"
+import { getAllProducts } from "@/app/lib/medusa"
 import ProductsClient from "./ProductsClient"
 
 export const metadata = {

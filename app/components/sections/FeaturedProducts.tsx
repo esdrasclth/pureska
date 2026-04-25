@@ -3,7 +3,7 @@
 import { motion, useInView } from "framer-motion"
 import { useRef } from "react"
 import Link from "next/link"
-import type { NormalizedProduct } from "@/app/lib/shopify"
+import type { NormalizedProduct } from "@/app/lib/medusa"
 import ProductCard from "@/app/components/ui/ProductCard"
 
 export default function FeaturedProducts({ products }: { products: NormalizedProduct[] }) {

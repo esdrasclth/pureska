@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, useEffect, useReducer, useState } from "react"
-import type { NormalizedProduct } from "@/app/lib/shopify"
+import type { NormalizedProduct } from "@/app/lib/medusa"
 
 export type CartItem = {
   product: NormalizedProduct

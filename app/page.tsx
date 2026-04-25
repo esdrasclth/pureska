@@ -1,4 +1,4 @@
-import { getAllProducts } from "@/app/lib/shopify"
+import { getAllProducts } from "@/app/lib/medusa"
 import Hero from "@/app/components/sections/Hero"
 import ValuesSection from "@/app/components/sections/ValuesSection"
 import FeaturedProducts from "@/app/components/sections/FeaturedProducts"

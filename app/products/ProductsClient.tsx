@@ -3,7 +3,7 @@
 import { useSearchParams } from "next/navigation"
 import { useState, useMemo, Suspense } from "react"
 import { motion } from "framer-motion"
-import type { NormalizedProduct } from "@/app/lib/shopify"
+import type { NormalizedProduct } from "@/app/lib/medusa"
 import ProductCard from "@/app/components/ui/ProductCard"
 
 const GOAL_TAGS = ["Energy", "Skin", "Anti-aging", "Detox", "Joints", "Brain"]

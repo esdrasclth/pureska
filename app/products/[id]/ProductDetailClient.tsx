@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import type { NormalizedProduct } from "@/app/lib/shopify"
+import type { NormalizedProduct } from "@/app/lib/medusa"
 import { useCart } from "@/app/context/CartContext"
 import Badge from "@/app/components/ui/Badge"
 import StarRating from "@/app/components/ui/StarRating"

@@ -1,4 +1,4 @@
-import { getAllProducts, getProductByHandle } from "@/app/lib/shopify"
+import { getAllProducts, getProductByHandle } from "@/app/lib/medusa"
 import { notFound } from "next/navigation"
 import ProductDetailClient from "./ProductDetailClient"
 import type { Metadata } from "next"
