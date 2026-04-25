@@ -14,16 +14,22 @@ export const metadata: Metadata = {
   },
 }
 
+const MAINTENANCE = process.env.MAINTENANCE_MODE === "true"
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="h-full">
       <body className="min-h-full flex flex-col antialiased" style={{ background: "#F7F3EE" }}>
-        <CartProvider>
-          <Navbar />
+        {MAINTENANCE ? (
           <main className="flex-1">{children}</main>
-          <Footer />
-          <CartDrawer />
-        </CartProvider>
+        ) : (
+          <CartProvider>
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <CartDrawer />
+          </CartProvider>
+        )}
       </body>
     </html>
   )
