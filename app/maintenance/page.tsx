@@ -63,7 +63,7 @@ export default function MaintenancePage() {
         className="absolute pointer-events-none"
         style={{
           width: "clamp(300px, 90vw, 980px)",
-          height: "clamp(480px, 80vh, 980px)",
+          height: "max(clamp(300px, 90vw, 980px), clamp(480px, 80vh, 980px))",
           background: "#3D1A4B",
           opacity: 0.9,
           top: "50%",
@@ -85,8 +85,7 @@ export default function MaintenancePage() {
 
       {/* Content */}
       <div
-        className="relative z-10 flex flex-col items-center text-center w-full px-6"
-        style={{ maxWidth: "min(480px, 92vw)" }}
+        className="relative z-10 flex flex-col items-center text-center w-full px-6 max-w-2xl"
       >
         {/* Logo */}
         <motion.div
@@ -165,7 +164,7 @@ export default function MaintenancePage() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.85, duration: 0.6 }}
-          className="w-full"
+          className="w-full px-8 sm:px-0"
         >
           {sent ? (
             <motion.div
@@ -190,7 +189,7 @@ export default function MaintenancePage() {
               </p>
             </motion.div>
           ) : (
-            <div className="flex flex-col gap-3">
+            <div className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
                 required
@@ -199,7 +198,7 @@ export default function MaintenancePage() {
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
                 placeholder="tu@email.com"
-                className="w-full px-5 bg-transparent outline-none text-sm"
+                className="w-full sm:flex-1 px-5 bg-transparent outline-none"
                 style={{
                   fontFamily: "'Satoshi', sans-serif",
                   border: "1.5px solid rgba(247,243,238,0.25)",
@@ -214,7 +213,7 @@ export default function MaintenancePage() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full text-white font-semibold transition-all active:scale-[0.98] disabled:opacity-60"
+                className="w-full sm:w-auto sm:shrink-0 text-white font-semibold transition-all hover:opacity-85 hover:scale-[1.02] active:scale-[0.98] disabled:opacity-60 whitespace-nowrap"
                 style={{
                   background: "#FF5C47",
                   fontFamily: "'Cabinet Grotesk', sans-serif",
@@ -222,6 +221,7 @@ export default function MaintenancePage() {
                   letterSpacing: "0.06em",
                   fontSize: "14px",
                   height: "44px",
+                  padding: "0 28px",
                   borderRadius: "0px",
                 }}
               >
